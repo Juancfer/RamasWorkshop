@@ -74,7 +74,7 @@ router.post("/", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const matchDeleted = await Book.findByIdAndDelete(id);
+    const matchDeleted = await Match.findByIdAndDelete(id);
     if (matchDeleted) {
       res.json(matchDeleted);
     } else {
@@ -88,7 +88,7 @@ router.delete("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const matchUpdated = await Book.findByIdAndUpdate(id, req.body, { new: true });
+    const matchUpdated = await Match.findByIdAndUpdate(id, req.body, { new: true });
     if (matchUpdated) {
       res.json(matchUpdated);
     } else {

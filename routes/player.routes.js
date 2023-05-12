@@ -74,7 +74,7 @@ router.post("/", async (req, res) => {
 router.delete("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const playerDeleted = await Book.findByIdAndDelete(id);
+    const playerDeleted = await Player.findByIdAndDelete(id);
     if (playerDeleted) {
       res.json(playerDeleted);
     } else {
@@ -88,7 +88,7 @@ router.delete("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const playerUpdated = await Book.findByIdAndUpdate(id, req.body, { new: true });
+    const playerUpdated = await Player.findByIdAndUpdate(id, req.body, { new: true });
     if (playerUpdated) {
       res.json(playerUpdated);
     } else {
