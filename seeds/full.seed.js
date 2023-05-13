@@ -3,24 +3,28 @@ const { connect } = require("../db.js");
 const { Sample } = require("../models/Sample.js");
 const { SubSample } = require("../models/SubSample.js");
 
-let subSampleList = [
+let playerList = [
   {
-    name: "Alex",
-    number: 13,
+    name: "Karl",
+    lastname: "Feliz",
+    position: "Delantero",
+    number: 9,
   },
   {
-    name: "Dani",
-    number: 69,
+    name: "Brandon",
+    lastname: "Ramos",
+    position: "Defensa",
+    number: 4,
   },
 ];
 
-let sampleList = [
+let teamList = [
   {
-    title: "Test Alex",
+    title: "Barcelona",
     subtitle: "Test 2",
   },
   {
-    title: "Test Dani",
+    title: "Madrid",
     subtitle: "Another subtitle",
   },
 ];
